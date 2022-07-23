@@ -1,0 +1,21 @@
+.flex_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid_container{
+    display:grid;
+    height:500px;
+    width: 500px
+}
+
+.cell{
+    border: 1px solid blue;
+    background-color: black;
+}
+
+.cell.active{
+    background-color: red;
+}
