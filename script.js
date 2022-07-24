@@ -91,5 +91,15 @@ function pause(){
 
 function play(){
     next()
-    cont = setTimeout(play, 200)
+    cont = setTimeout(play, speed)
+}
+
+let speed
+const slideValue = document.querySelector('.slide_value')
+const slider = document.querySelector('.slider')
+slideValue.innerHTML = slider.value
+
+slider.oninput = () => {
+    slideValue.innerHTML = slider.value
+    speed = slider.value * 5
 }
