@@ -67,7 +67,7 @@ function next(){
     cellState = nextState
 }
 
-alive = [0,1,1,1,1,0,0,0,0]
+alive = [0,0,1,1,0,0,0,0,0]
 dead = [0,0,0,1,0,0,0,0,0]
 
 function cell_click(row, col){
@@ -84,3 +84,11 @@ window.addEventListener('load', (e) => {
     create_grid(20);
 })
 
+function pause(){
+    clearTimeout(cont)
+}
+
+function play(){
+    next()
+    cont = setTimeout(play, 200)
+}
