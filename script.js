@@ -4,6 +4,7 @@ let cellGrid = []
 let cellState = [];
 let height = 20
 let width = 20
+let cont;
 
 function create_grid(size){
     grid.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
