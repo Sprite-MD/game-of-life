@@ -14,19 +14,29 @@
             <header> <h1> Conway's Game of Life </h1></header>
     
             <div class="grid_container"></div>
-            <div class="play"></div>
     
             <div class = 'slider_container'>
                 <input type="range" min="1" max="100" value="50" class="slider">
                 <div class = 'slide_value'></div>
             </div>
 
-            <button class = 'play' onclick = 'play()'> Play </button>
-            <button class = 'pause' onclick = 'pause()'> Pause</button>        
-            <button class = 'next' onclick = 'next()'> Next State </button>
-        </div>
+            <div class = "action_btns">
+                <button class = 'play' onclick = 'play()'> Play </button>
+                <button class = 'pause' onclick = 'pause()'> Pause</button>        
+                <button class = 'next' onclick = 'next()'> Next State </button>
+            </div>
 
+            <div class = "pattern_btns">
+                <button class = 'generate' onclick = 'rng_generate()'> Random </button>
+                <button class = 'glider'> Glider </button>
+            </div>
         
+        
+        
+        
+        
+        
+        </div>      
     </body>
     <script src="script.js"></script>
 

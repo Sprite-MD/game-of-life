@@ -4,9 +4,8 @@ let cellGrid = []
 let cellState = [];
 let height = 20
 let width = 20
-let cont;
 
-function create_grid(size){
+function create_grid(){
     grid.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${height}, 1fr)`;
 
@@ -68,6 +67,7 @@ function next(){
     cellState = nextState
 }
 
+// Look up array for cell state
 alive = [0,0,1,1,0,0,0,0,0]
 dead = [0,0,0,1,0,0,0,0,0]
 
@@ -82,8 +82,10 @@ function cell_click(row, col){
 }
 
 window.addEventListener('load', (e) => {
-    create_grid(20);
+    create_grid();
 })
+
+let cont;
 
 function pause(){
     clearTimeout(cont)
@@ -102,4 +104,16 @@ slideValue.innerHTML = slider.value
 slider.oninput = () => {
     slideValue.innerHTML = slider.value
     speed = slider.value * 5
+}
+
+// 50% chance for a cell to be active
+function rng_generate(){
+    for (row = 0; row < height; row++){
+        for (col = 0; col < width; col++){
+            if (Math.random() >= 0.5){
+                cellGrid[row][col].classList.add('active')
+                cellState[row][col] = 1
+            }
+        }
+    }
 }
