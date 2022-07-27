@@ -7,8 +7,8 @@
 
 .grid_container{
     display:grid;
-    height:500px;
-    width: 500px
+    height:700px;
+    width: 700px;
 }
 
 .cell{

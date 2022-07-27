@@ -2,8 +2,8 @@ const grid = document.querySelector('.grid_container');
 
 let cellGrid = []
 let cellState = [];
-let height = 20
-let width = 20
+let height = 50
+let width = 50
 
 function create_grid(){
     grid.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
@@ -113,6 +113,17 @@ function rng_generate(){
             if (Math.random() >= 0.5){
                 cellGrid[row][col].classList.add('active')
                 cellState[row][col] = 1
+            }
+        }
+    }
+}
+
+function clear_grid(){
+    for (row = 0; row < height; row++){
+        for (col = 0; col < width; col++){
+            if (cellState[row][col] == 1){
+                cellGrid[row][col].classList.remove('active')
+                cellState[row][col] = 0
             }
         }
     }
