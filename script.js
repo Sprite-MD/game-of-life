@@ -2,8 +2,8 @@ const grid = document.querySelector('.grid_container');
 
 let cellGrid = []
 let cellState = [];
-let height = 50
-let width = 50
+let height = document.querySelector('#user_row').value
+let width = document.querySelector('#user_column').value
 
 function create_grid(){
     grid.style.gridTemplateColumns = `repeat(${width}, 1fr)`;
@@ -127,4 +127,13 @@ function clear_grid(){
             }
         }
     }
+}
+
+function save_settings(){
+    height = document.querySelector('#user_row').value
+    width = document.querySelector('#user_column').value
+    while (grid.firstChild){
+        grid.removeChild(grid.lastChild);
+    }
+    create_grid()
 }
