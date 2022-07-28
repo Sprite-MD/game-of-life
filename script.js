@@ -132,8 +132,114 @@ function clear_grid(){
 function save_settings(){
     height = document.querySelector('#user_row').value
     width = document.querySelector('#user_column').value
+
+    // Deletes current grid and make new one 
     while (grid.firstChild){
         grid.removeChild(grid.lastChild);
     }
+    cellGrid = []
+    cellState = []
     create_grid()
+}
+
+function glider(){
+    height = 50
+    width = 50
+    clear_grid()
+    
+    glider_box()
+    queen_bee()
+    shuttle()
+    
+}
+
+function glider_box(){
+    cellGrid[10][9].classList.add('active')
+    cellState[10][9] = 1
+    cellGrid[10][10].classList.add('active')
+    cellState[10][10] = 1
+    cellGrid[11][9].classList.add('active')
+    cellState[11][9] = 1
+    cellGrid[11][10].classList.add('active')
+    cellState[11][10] = 1
+
+    cellGrid[8][43].classList.add('active')
+    cellState[8][43] = 1
+    cellGrid[8][44].classList.add('active')
+    cellState[8][44] = 1
+    cellGrid[9][43].classList.add('active')
+    cellState[9][43] = 1
+    cellGrid[9][44].classList.add('active')
+    cellState[9][44] = 1
+}
+
+function queen_bee(){
+    cellGrid[10][19].classList.add('active')
+    cellGrid[11][19].classList.add('active')
+    cellGrid[12][19].classList.add('active')
+
+    cellGrid[9][20].classList.add('active')
+    cellGrid[13][20].classList.add('active')
+
+    cellGrid[8][21].classList.add('active')
+    cellGrid[8][22].classList.add('active')
+    cellGrid[14][21].classList.add('active')
+    cellGrid[14][22].classList.add('active')
+
+    cellGrid[11][23].classList.add('active')
+    cellGrid[9][24].classList.add('active')
+    cellGrid[13][24].classList.add('active')
+
+    cellGrid[10][25].classList.add('active')
+    cellGrid[11][25].classList.add('active')
+    cellGrid[12][25].classList.add('active')
+    cellGrid[11][26].classList.add('active')
+
+    cellState[10][19] = 1
+    cellState[11][19] = 1
+    cellState[12][19] = 1
+    cellState[9][20] = 1
+    cellState[13][20] = 1
+    cellState[8][21] = 1
+    cellState[8][22] = 1
+    cellState[14][21] = 1
+    cellState[14][22] = 1
+    cellState[11][23] = 1
+    cellState[9][24] = 1
+    cellState[13][24] = 1
+    cellState[10][25] = 1
+    cellState[11][25] = 1
+    cellState[12][25] = 1
+    cellState[11][26] = 1
+}
+
+function shuttle(){
+    cellGrid[8][29].classList.add('active')
+    cellGrid[9][29].classList.add('active')
+    cellGrid[10][29].classList.add('active')
+    cellGrid[8][30].classList.add('active')
+    cellGrid[9][30].classList.add('active')
+    cellGrid[10][30].classList.add('active')
+
+    cellGrid[7][31].classList.add('active')
+    cellGrid[11][31].classList.add('active')
+    cellGrid[6][33].classList.add('active')
+    cellGrid[7][33].classList.add('active')
+    cellGrid[11][33].classList.add('active')
+    cellGrid[12][33].classList.add('active')
+
+    cellState[8][29] = 1
+    cellState[9][29] = 1
+    cellState[10][29] = 1
+    cellState[8][30] = 1
+    cellState[9][30] = 1
+    cellState[10][30] = 1
+    cellState[7][31] = 1
+    cellState[11][31] = 1
+    cellState[6][33] = 1
+    cellState[7][33] = 1
+    cellState[11][33] = 1
+    cellState[12][33] = 1
+
+
 }
