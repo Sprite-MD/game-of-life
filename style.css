@@ -34,3 +34,15 @@
 .slider:hover{
     opacity: 1;
 }
+
+.action_btns{
+    margin: 10px
+}
+
+.pattern_btns{
+    margin-bottom: 10px;
+}
+
+.user_input{
+    margin-bottom: 10px;
+}

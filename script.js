@@ -96,7 +96,7 @@ function play(){
     cont = setTimeout(play, speed)
 }
 
-let speed
+let speed = 50
 const slideValue = document.querySelector('.slide_value')
 const slider = document.querySelector('.slider')
 slideValue.innerHTML = slider.value
